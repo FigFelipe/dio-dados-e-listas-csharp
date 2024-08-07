@@ -68,7 +68,47 @@ namespace dados_e_listas.ManipulandoValores
             Console.WriteLine($"Formato padrão: {data}");
 
             // Formato customizado
+            // .ToString()
+            // MM --> mes
+            // mm --> minuto
+            // HH --> formato 24h
+            // hh --> formato 12h
             Console.WriteLine($"Formato customizado: {data.ToString("dd/MM/yyyy HH:mm")}");
+
+            // Exibindo somente a data
+            // .ToShortDateString()
+            Console.WriteLine($"Somente a data: {data.ToShortDateString()}");
+
+            // Exibindo somente a hora
+            // .ToShortTimeString()
+            Console.WriteLine($"Semente a hora: {data.ToShortTimeString()}");
+
+            // Converter um 'string' para o formato 'DateTime'
+            DateTime dataConvertida = DateTime.Parse("01/02/2003 01:02:03");
+            Console.WriteLine($"Data convertida do string: {dataConvertida}");
+
+            // Conversão 'string' para 'DateTime com 'TryParse'
+            string dataString = "2022-04-17 18:00";
+
+            bool isConvertido = false;
+
+            isConvertido = DateTime.TryParseExact(dataString,
+                                     "yyyy-MM-dd HH:mm",
+                                      CultureInfo.InvariantCulture, // Independente de cultura, nao tem cultura definida
+                                      DateTimeStyles.None,
+                                      out data);
+
+            if(isConvertido)
+            {
+                // Conversão válida
+                Console.WriteLine($"TryParseExact: '{data}', é uma data válida.");
+            }
+            else
+            {
+                // Conversão inválida --> "01/01/0001 00:00:00"
+                Console.WriteLine($"TryParseExact: '{data}', não é uma válida.");
+
+            }
 
         }
     }

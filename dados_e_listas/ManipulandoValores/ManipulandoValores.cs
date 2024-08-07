@@ -56,5 +56,20 @@ namespace dados_e_listas.ManipulandoValores
             int cep = 12345678;
             Console.WriteLine($"{cep.ToString("#####-###")}");
         }
+
+        public static void ExemploDateTime()
+        {
+            // DateTime é um tipo 'struct'
+
+            // Representa a data no fuso horario local
+            DateTime data = DateTime.Now;
+
+            // Formato padrão
+            Console.WriteLine($"Formato padrão: {data}");
+
+            // Formato customizado
+            Console.WriteLine($"Formato customizado: {data.ToString("dd/MM/yyyy HH:mm")}");
+
+        }
     }
 }

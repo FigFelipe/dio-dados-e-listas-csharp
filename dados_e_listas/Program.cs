@@ -6,5 +6,6 @@ using dados_e_listas.PropiedadesMetodosConstrutores;
 
 // 2. Exemplo de 'Manipulando Valores'
 //ManipulandoValores.Exemplo();
-ManipulandoValores.ExemploValoresMonetarios();
+//ManipulandoValores.ExemploValoresMonetarios();
+ManipulandoValores.ExemploDateTime();
 

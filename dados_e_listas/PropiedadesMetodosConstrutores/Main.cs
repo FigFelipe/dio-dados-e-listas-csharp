@@ -12,14 +12,8 @@ namespace dados_e_listas.PropiedadesMetodosConstrutores
     {
         public static void ExemploPessoa()
         {
-            Pessoa p1 = new Pessoa();
-
-            p1.Nome = "Felipe";
-            p1.Sobrenome = "Bezerra";
-            p1.Idade = 0;
-
-            p1.Apresentar();
-
+            Pessoa pessoa = new Pessoa(nome: "Felipe", sobrenome: "Figueiredo Bezerra");
+                        
             // Instanciando um novo objeto Curso
             Curso curso = new Curso();
             curso.Nome = "Inglês";
@@ -28,7 +22,7 @@ namespace dados_e_listas.PropiedadesMetodosConstrutores
             curso.listaAlunos = new List<Pessoa>();
 
             // Adicionando 'aluno' ao 'cursoIngles'
-            curso.AdicionarAluno(p1);
+            curso.AdicionarAluno(pessoa);
 
             // Exibir a quantidade de Alunos no Curso
             Console.WriteLine($"Qtd alunos no curso: {curso.QuantidadeAlunos().ToString()}");

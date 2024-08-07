@@ -47,6 +47,20 @@ namespace dados_e_listas.PropiedadesMetodosConstrutores.Models
             }
         }
 
+        // Construtores
+        // 1. Todo construtor deve ter o mesmo nome que a sua 'Classe'
+        // 2. Não possui um tipo de retorno
+        public Pessoa()
+        {
+
+        }
+
+        public Pessoa(string nome, string sobrenome)
+        {
+            Nome = nome;
+            Sobrenome = sobrenome;
+        }
+
         // Métodos
         public void Apresentar()
         {

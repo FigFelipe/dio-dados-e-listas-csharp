@@ -35,17 +35,26 @@ namespace dados_e_listas.ManipulandoValores
         public static void ExemploValoresMonetarios()
         {
             // Definindo a cultura para a região 'en-US'
-            CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("en-US");
+            CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("pt-BR");
 
             decimal valorMonetario = 1502.40m;
           
             // Exibir o valor monetario na moeda de cultura local
             // :C => Currency (moeda)
             // Saída: R$ 82,40
-            Console.WriteLine($"{valorMonetario:C}");
+            Console.WriteLine($"Valor monetário: {valorMonetario:N2}");
 
+            // Porcetagem
+            // .ToString("P") => adiciona automaticamente o sinal '%'
+            double porcentagem = .3421;
+            Console.WriteLine($"Porcentagem: {porcentagem.ToString("P")}");
 
+            // Sinal customizado
+            int numero = 123456;
+            Console.WriteLine($"{numero.ToString("##-##-##")}");
 
+            int cep = 12345678;
+            Console.WriteLine($"{cep.ToString("#####-###")}");
         }
     }
 }

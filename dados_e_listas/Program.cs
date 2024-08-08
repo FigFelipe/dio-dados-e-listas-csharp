@@ -1,6 +1,8 @@
-﻿using dados_e_listas.Exceptions;
+﻿using dados_e_listas.Colecoes;
+using dados_e_listas.Exceptions;
 using dados_e_listas.ManipulandoValores;
 using dados_e_listas.PropiedadesMetodosConstrutores;
+using dados_e_listas.Stacks;
 
 // 1. Exemplo de Propiedades
 //Main.ExemploPessoa();
@@ -12,5 +14,11 @@ using dados_e_listas.PropiedadesMetodosConstrutores;
 
 // 3. Exceptions
 //Excecoes.ExemploExcecoes();
-Excecoes.ExemploThrow();
+//Excecoes.ExemploThrow();
+
+// 4. Filas
+//Filas.ExemploFila();
+
+// 5. Stack (Pilha)
+Pilha.ExemploPilha();
 

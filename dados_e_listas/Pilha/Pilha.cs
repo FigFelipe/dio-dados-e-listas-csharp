@@ -32,6 +32,9 @@ namespace dados_e_listas.Stacks
             // Pela LIFO, é possível remover somente o elemento no topo
             Console.WriteLine($"\nRemovendo o elemento do topo da pilha: {pilha.Pop()}");
 
+            // Adicionando um novo elemento na 'pilha'
+            pilha.Push(20);
+
             // Percorrendo os elementos da 'pilha'
             foreach (int item in pilha)
             {

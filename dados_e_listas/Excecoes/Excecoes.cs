@@ -60,7 +60,7 @@ namespace dados_e_listas.Exceptions
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Exceção tratada."); // Aqui a exceção do throw é tratada corretamente, sem encerrar o programa atual
+                Console.WriteLine("Exceção tratada." + ex.StackTrace); // Aqui a exceção do throw é tratada corretamente, sem encerrar o programa atual
             }
 
         }

@@ -4,6 +4,7 @@ using dados_e_listas.Exceptions;
 using dados_e_listas.ManipulandoValores;
 using dados_e_listas.PropiedadesMetodosConstrutores;
 using dados_e_listas.Stacks;
+using dados_e_listas.Tuplas;
 
 // 1. Exemplo de Propiedades
 //Main.ExemploPessoa();
@@ -24,5 +25,8 @@ using dados_e_listas.Stacks;
 //Pilha.ExemploPilha();
 
 // 6. Dicionário
-Dicionario.ExemploDicionario();
+//Dicionario.ExemploDicionario();
+
+// 7. Tuplas
+Tupla.ExemploTupla();
 

@@ -1,4 +1,5 @@
 ﻿using dados_e_listas.Colecoes;
+using dados_e_listas.Dicionario;
 using dados_e_listas.Exceptions;
 using dados_e_listas.ManipulandoValores;
 using dados_e_listas.PropiedadesMetodosConstrutores;
@@ -20,5 +21,8 @@ using dados_e_listas.Stacks;
 //Filas.ExemploFila();
 
 // 5. Stack (Pilha)
-Pilha.ExemploPilha();
+//Pilha.ExemploPilha();
+
+// 6. Dicionário
+Dicionario.ExemploDicionario();
 

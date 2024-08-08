@@ -34,6 +34,7 @@ namespace dados_e_listas.Tuplas
             // Outra forma (NÃO RECOMENDADO - legibilidade)
             var outraTuplaCreate = Tuple.Create(3, "Jose", "J", 1.8m);
 
+            // --------------------------------------------------------------------- //
 
             // Acessando o método tupla, que retorna uma tupla com 3 valores
             string caminhoArquivo = "C:\\Users\\Felipe\\Documents\\Dev\\DIO\\dio-dados-e-listas-csharp\\dados_e_listas\\Tupla\\Arquivos\\ArquivoTexto.txt";
@@ -78,6 +79,27 @@ namespace dados_e_listas.Tuplas
             catch(Exception)
             {
                 return (false, new string[0], 0);
+            }
+        }
+
+        public static void ExemploTernario()
+        {
+            int numero = 20;
+            bool isPar = false;
+
+            // IF Ternario (recomendado somente para retornar 2 resultados)
+            isPar = numero % 2 == 0;
+
+            Console.WriteLine($"Ternário --> O número {numero} é '{(isPar? "par" : "ímpar")}'");
+
+            // IF comum
+            if(numero % 2 == 0)
+            {
+                Console.WriteLine($"Comum --> O número '{numero}' é par.");
+            }
+            else
+            {
+                Console.WriteLine($"O número '{numero}' é ímpar.");
             }
         }
     }

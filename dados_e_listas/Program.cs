@@ -28,5 +28,6 @@ using dados_e_listas.Tuplas;
 //Dicionario.ExemploDicionario();
 
 // 7. Tuplas
-Tupla.ExemploTupla();
+//Tupla.ExemploTupla();
+Tupla.ExemploTernario();
 

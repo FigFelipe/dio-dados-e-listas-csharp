@@ -11,5 +11,6 @@ using dados_e_listas.PropiedadesMetodosConstrutores;
 //ManipulandoValores.ExemploDateTime();
 
 // 3. Exceptions
-Excecoes.ExemploExcecoes();
+//Excecoes.ExemploExcecoes();
+Excecoes.ExemploThrow();
 

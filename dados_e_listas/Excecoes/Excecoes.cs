@@ -47,5 +47,36 @@ namespace dados_e_listas.Exceptions
 
         }
 
+        public static void ExemploThrow()
+        {
+            Metodo1();
+        }
+
+        public static void Metodo1()
+        {
+            try
+            {
+                Metodo2();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Exceção tratada."); // Aqui a exceção do throw é tratada corretamente, sem encerrar o programa atual
+            }
+
+        }
+
+        public static void Metodo2()
+        {
+            Metodo3();
+        }
+        public static void Metodo3()
+        {
+            Metodo4();
+        }
+        public static void Metodo4()
+        {
+            throw new Exception("Ocorreu uma exceção."); // Não tem condição de tratar a exceção, e retorna ao metodo anterior da fila 
+        }
+
     }
 }

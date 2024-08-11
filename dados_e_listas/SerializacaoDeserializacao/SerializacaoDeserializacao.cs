@@ -29,9 +29,15 @@ namespace dados_e_listas.SerializacaoDeserializacao
         public static void ExemploSerializacao()
         {
             Venda v1 = new Venda(1, "Material de escritório", 25.00m);
+            Venda v2 = new Venda(2, "Licença de software", 110.00m);
+
+            List<Venda> listaVendas = new List<Venda>();
+
+            listaVendas.Add(v1);
+            listaVendas.Add(v2);
 
             // Serializar o objeto 'v1' do tipo Venda
-            string serializado = JsonConvert.SerializeObject(v1, Formatting.Indented);
+            string serializado = JsonConvert.SerializeObject(listaVendas, Formatting.Indented);
 
             // Visualizar o objeto serializado (JSON) 
             Console.WriteLine(serializado);
@@ -40,21 +46,19 @@ namespace dados_e_listas.SerializacaoDeserializacao
             // --> Note que o nome do arquivo está no final do caminho informado
             // --> vendas.json
 
-            string folderArquivo = "C:\\Users\\Felipe\\Documents\\Dev\\DIO\\dio-dados-e-listas-csharp\\dados_e_listas\\SerializacaoDeserializacao\\Arquivos\\vendas.json";
+            //string folderArquivo = "C:\\Users\\Felipe\\Documents\\Dev\\DIO\\dio-dados-e-listas-csharp\\dados_e_listas\\SerializacaoDeserializacao\\Arquivos\\vendas.json";
 
             string workingDirectory = Environment.CurrentDirectory;
             string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName;
 
-            Console.WriteLine(workingDirectory);
-            Console.WriteLine(projectDirectory);
+            //Console.WriteLine(workingDirectory);
+            //Console.WriteLine(projectDirectory);
 
-            string pastaArquivo = projectDirectory + "\\SerializacaoDeserializacao\\Arquivos";
-            string nomeArquivo = "\\vendas.json";
-            string arquivoPath = pastaArquivo + nomeArquivo; 
+            string pastaArquivo = projectDirectory + "\\SerializacaoDeserializacao\\Arquivos\\vendas.json";
 
-            Console.WriteLine(arquivoPath);
+            //Console.WriteLine(pastaArquivo);
 
-            File.WriteAllText(arquivoPath, serializado);
+            File.WriteAllText(pastaArquivo, serializado); // Escreve o conteúdo .json para o arquivo 'vendas.json'
         }
     }
 }

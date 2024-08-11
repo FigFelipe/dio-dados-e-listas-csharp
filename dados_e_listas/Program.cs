@@ -36,5 +36,6 @@ using dados_e_listas.Tuplas;
 // https://www.nuget.org/
 
 // 9. Serialização (JSON)
-SerializacaoDeserializacao.ExemploSerializacao();
+//SerializacaoDeserializacao.ExemploSerializacao();
+SerializacaoDeserializacao.ExemploDeserializacao();
 

@@ -28,8 +28,10 @@ namespace dados_e_listas.SerializacaoDeserializacao
 
         public static void ExemploSerializacao()
         {
-            Venda v1 = new Venda(1, "Material de escritório", 25.00m);
-            Venda v2 = new Venda(2, "Licença de software", 110.00m);
+            DateTime dataAtual = DateTime.Now;
+
+            Venda v1 = new Venda(1, "Material de escritório", 25.00m, dataAtual);
+            Venda v2 = new Venda(2, "Licença de software", 110.00m, dataAtual);
 
             List<Venda> listaVendas = new List<Venda>();
 
@@ -59,6 +61,35 @@ namespace dados_e_listas.SerializacaoDeserializacao
             //Console.WriteLine(pastaArquivo);
 
             File.WriteAllText(pastaArquivo, serializado); // Escreve o conteúdo .json para o arquivo 'vendas.json'
+        }
+
+        public static void ExemploDeserializacao()
+        {
+            // Recebe um arquivo .JSON e extrai a informação do objeto
+
+            // Caminho do arquivo .json
+            string workingDirectory = Environment.CurrentDirectory;
+            string projectDirectory = Directory.GetParent(workingDirectory).Parent.Parent.FullName;
+            string arquivoJsonPath = projectDirectory + "\\SerializacaoDeserializacao\\Arquivos\\vendas.json";
+
+            // Dicas
+            // 1. Mapear o conteudo do .json para uma classe
+            // 2. Mapeado para a classe 'Venda'
+
+            string conteudoJson = File.ReadAllText(arquivoJsonPath);
+
+            // Instanciando uma nova lista do tipo 'Venda'
+            List<Venda> listaVendas = new List<Venda>();
+
+            // Deserializando o conteudo para um objeto 'List<Venda>'
+            listaVendas = JsonConvert.DeserializeObject<List<Venda>>(conteudoJson);
+
+            // Percorrendo a lista 'venda'
+            foreach(Venda v in listaVendas)
+            {
+                Console.WriteLine($"Id: {v.Id}, Produto: {v.Produto}, Preço: {v.Preco}, Data da Venda: {v.DataVenda.ToString("dd/MM/yyyy HH:mm:ss")}");
+            }
+            
         }
     }
 }
